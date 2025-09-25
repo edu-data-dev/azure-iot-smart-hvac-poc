@@ -66,3 +66,17 @@ local.settings.json
 # IDEs
 .idea/
 .project
+
+# Environment files and credentials
+.env
+.env.local
+.env.production
+*.env
+
+# Azure credentials and connection strings
+azure-credentials.json
+connection-strings.txt
+
+# Configuration files with sensitive data
+config.json
+secrets.json
