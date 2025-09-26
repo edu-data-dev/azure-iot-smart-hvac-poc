@@ -6,7 +6,7 @@ from azure.iot.device import IoTHubDeviceClient, Message
 
 # --- CONFIGURAÇÃO ---
 # Cole a Connection String do SEU DISPOSITIVO (sensor-sala101) aqui
-CONNECTION_STRING = "<COLE_AQUI_A_CONNECTION_STRING_DO_SEU_DISPOSITIVO>"
+CONNECTION_STRING = "HostName=iothub-climaconforto-eduardo.azure-devices.net;DeviceId=sensor-sala101;SharedAccessKey=SuaChaveAqui"
 DEVICE_ID = "sensor-sala101"
 BUILDING_ID = "SP-EDF01"
 ROOM_ID = "101"

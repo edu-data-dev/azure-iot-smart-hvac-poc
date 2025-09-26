@@ -60,7 +60,7 @@ env.bak/
 venv.bak/
 
 # VS Code
-.vscode/
+
 local.settings.json
 
 # IDEs

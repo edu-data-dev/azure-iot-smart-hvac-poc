@@ -1,0 +1,23 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "event",
+      "direction": "in",
+      "eventHubName": "%EventHubName%",
+      "connection": "IOTHUB_CONNECTION_STRING",
+      "cardinality": "one",
+      "consumerGroup": "$Default"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "outputDocument",
+      "direction": "out",
+      "databaseName": "db_hvac",
+      "containerName": "leituras_temperatura",
+      "createIfNotExists": true,
+      "connection": "COSMOSDB_CONNECTION_STRING"
+    }
+  ]
+}
