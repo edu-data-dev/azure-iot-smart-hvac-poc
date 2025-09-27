@@ -3,5 +3,14 @@
 # azure-monitor-opentelemetry
 
 azure-functions
-
 azure-iot-hub
+azure-eventhub
+azure-cosmos
+
+# Dependências auxiliares
+# protobuf com versão mínima compatível
+protobuf>=3.20.0
+
+# Observações:
+# - Não declarei `azure-functions-worker` explicitamente: o host/func tools gerencia esse pacote.
+# - Não forcei versões de `grpcio`/`grpcio-tools` para evitar conflitos com `azure-functions`.

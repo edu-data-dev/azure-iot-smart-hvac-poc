@@ -3,13 +3,25 @@ import json
 import random
 import threading
 from azure.iot.device import IoTHubDeviceClient, Message
+from dotenv import load_dotenv
+import os   
+
+# Carrega variáveis de ambiente do arquivo .env
+load_dotenv()
 
 # --- CONFIGURAÇÃO ---
-# Cole a Connection String do SEU DISPOSITIVO (sensor-sala101) aqui
-CONNECTION_STRING = "HostName=iothub-climaconforto-eduardo.azure-devices.net;DeviceId=sensor-sala101;SharedAccessKey=SuaChaveAqui"
+# Configuração via variáveis de ambiente para segurança
+CONNECTION_STRING = os.getenv("AZURE_IOT_CONNECTION_STRING", "")
 DEVICE_ID = "sensor-sala101"
 BUILDING_ID = "SP-EDF01"
 ROOM_ID = "101"
+
+# Validação de configuração
+if not CONNECTION_STRING:
+    print("❌ ERRO: Variável de ambiente AZURE_IOT_CONNECTION_STRING não configurada!")
+    print("💡 Configure a variável de ambiente ou crie um arquivo .env")
+    print("📋 Exemplo: export AZURE_IOT_CONNECTION_STRING='HostName=...'")
+    exit(1)
 
 # Simulação de temperatura
 temperatura_atual = 22.5

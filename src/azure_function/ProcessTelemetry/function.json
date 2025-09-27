@@ -5,8 +5,7 @@
       "type": "eventHubTrigger",
       "name": "event",
       "direction": "in",
-      "eventHubName": "%EventHubName%",
-      "connection": "IOTHUB_CONNECTION_STRING",
+      "connection": "AzureWebJobsEventHubConnection",
       "cardinality": "one",
       "consumerGroup": "$Default"
     },
