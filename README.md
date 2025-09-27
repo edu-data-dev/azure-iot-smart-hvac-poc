@@ -25,7 +25,7 @@ Este projeto demonstra competências em:
 
 A arquitetura foi desenhada para ser **escalável**, **resiliente** e de **baixa latência**, utilizando serviços PaaS (Platform as a Service) do Azure para focar na lógica de negócio.
 
-![Arquitetura da Solução](docs/arquitetura-smart-hvac.png) 
+![Arquitetura da Solução](docs/arquitetura.png) 
 
 ### 🔄 Fluxo de Dados
 
